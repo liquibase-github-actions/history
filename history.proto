@@ -20,9 +20,11 @@ message HistoryRequest {
   optional string driver_properties_file = 4; // The JDBC driver properties file
   optional string format = 5; // History output format
   optional string password = 6; // Password to use to connect to the database
-  string url = 7; // *required* The JDBC database connection URL
-  optional string username = 8; // Username to use to connect to the database
-  liquibase.GlobalOptions global_options = 9;
+  optional bool show_tags = 7; // Include only tagged changesets
+  optional string tag_filter = 8; // Receives a list of comma separated tags to filter the changesets
+  string url = 9; // *required* The JDBC database connection URL
+  optional string username = 10; // Username to use to connect to the database
+  liquibase.GlobalOptions global_options = 11;
 }
 
 message Response {
