@@ -6,7 +6,7 @@ List all deployed changesets and their deployment ID
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/history@v4.31.0
+- uses: liquibase-github-actions/history@v4.31.1
   with:
     # The JDBC database connection URL
     # string
@@ -70,7 +70,7 @@ The liquibase history action accepts all valid liquibase global options as optio
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/history@v4.31.0
+  - uses: liquibase-github-actions/history@v4.31.1
     with:
       url: ""
       headless: true
